@@ -34,9 +34,24 @@ int mostrarArray(int array[], int tam);
  */
 int mostrarParesArray(int array[], int tam);
 
+/** \brief pide un dato y llena un string
+* \param list eVivienda*
+* \param texto char*
+* \return int Return (-1) if Error [Invalid length or NULL pointer or without
+free space] - (0) if Ok */
 int llenarString(char array[], char texto[]);
 
+/** \brief pide un dato y llena un int
+* \param list eVivienda*
+* \param texto char*
+* \return int Return (-1) if Error [Invalid length or NULL pointer or without
+free space] - (0) if Ok */
 int llenarInt(int* variable, char texto[]);
 
+/** \brief pide un dato y llena un float
+* \param list eVivienda*
+* \param texto char*
+* \return int Return (-1) if Error [Invalid length or NULL pointer or without
+free space] - (0) if Ok */
 float llenarFloat(float* variable, char texto[]);
 

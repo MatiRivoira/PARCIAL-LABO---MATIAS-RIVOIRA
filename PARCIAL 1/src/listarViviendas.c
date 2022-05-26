@@ -12,6 +12,7 @@
 #include "UTN.h"
 #include "funcionesExtra.h"
 
+
 int listarViviendas(eVivienda* list, int tam){
 	int retorno = -1;
 	int valor;
