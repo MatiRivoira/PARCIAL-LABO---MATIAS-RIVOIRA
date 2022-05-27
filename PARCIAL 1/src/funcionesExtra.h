@@ -79,5 +79,10 @@ int printViviendas(eVivienda* list, int tam);
 free space] - (0) if Ok */
 char deseaContinuar();
 
-
+/** \brief printe todas las viviendas cargadas en un array
+* \param list eCensista*
+* \param tam int
+* \param legajo int
+* \return int Return (-1) if Error [Invalid length or NULL pointer or without
+free space] - (0) if Ok */
 int listarCensistaByLegajo(eCensista* list, int tam,int legajo);

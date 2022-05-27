@@ -73,6 +73,5 @@ int censoMas(eVivienda* listViviendas, int tam, eCensista* list, int tam2){
 		printf("\nCON %d CENSOS", contador1);
 	}
 
-
 	return retorno;
 }
