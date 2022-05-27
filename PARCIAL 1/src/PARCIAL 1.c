@@ -61,11 +61,17 @@ int main(void) {
 				if(viviendasCargadas > 0){
 					bajarVivienda(listaViviendas, TAMVIVIENDAS);
 					viviendasCargadas--;
+				} else {
+					printf("\nERROR, PRIMERO CARGUE UNA VIVIENDA ¯_(ツ)_/¯ ");
+					system("pause");
 				}
 				break;
 			case 4:
 				if(viviendasCargadas > 0){
 					listarViviendas(listaViviendas, TAMVIVIENDAS);
+				} else {
+					printf("\nERROR, PRIMERO CARGUE UNA VIVIENDA ¯_(ツ)_/¯ ");
+					system("pause");
 				}
 				break;
 			case 5:
@@ -74,6 +80,9 @@ int main(void) {
 			case 6:
 				if(viviendasCargadas > 0){
 					censoMas(listaViviendas, TAMVIVIENDAS, listaCensistas, TAMCENSISTAS);
+				} else {
+					printf("\nERROR, PRIMERO CARGUE UNA VIVIENDA ¯_(ツ)_/¯ ");
+					system("pause");
 				}
 				break;
 		}

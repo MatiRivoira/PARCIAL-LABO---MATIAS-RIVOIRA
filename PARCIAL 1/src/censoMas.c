@@ -38,24 +38,39 @@ int censoMas(eVivienda* listViviendas, int tam, eCensista* list, int tam2){
 	if(contador1 > contador2 && contador1 > contador3){
 		printf("\nEL CENSISTA CON MAS CENSOS REALIZADOS ES:");
 		listarCensistaByLegajo(list,tam2,100);
+		printf("\nCON %d CENSOS", contador1);
 	} else if(contador2 > contador1 && contador2 > contador3){
 		printf("\nEL CENSISTA CON MAS CENSOS REALIZADOS ES:");
 		listarCensistaByLegajo(list,tam2,101);
+		printf("\nCON %d CENSOS", contador2);
 	} else if(contador3 > contador1 && contador3 > contador2){
 		printf("\nEL CENSISTA CON MAS CENSOS REALIZADOS ES:");
 		listarCensistaByLegajo(list,tam2,102);
+		printf("\nCON %d CENSOS", contador3);
 	} else if(contador1 == contador2 && contador1 > contador3){
 		printf("\nHAY UN EMPATE!! LOS CENSISTAS CON MAS CENSOS REALIZADOS SON:");
 		listarCensistaByLegajo(list,tam2,100);
+		printf("\nCON %d CENSOS", contador1);
 		listarCensistaByLegajo(list,tam2,101);
+		printf("\nCON %d CENSOS", contador2);
 	} else if(contador2 == contador3 && contador2 > contador1){
 		printf("\nHAY UN EMPATE!! LOS CENSISTAS CON MAS CENSOS REALIZADOS SON:");
 		listarCensistaByLegajo(list,tam2,101);
+		printf("\nCON %d CENSOS", contador2);
 		listarCensistaByLegajo(list,tam2,102);
+		printf("\nCON %d CENSOS", contador3);
 	} else if(contador1 == contador3 && contador1 > contador2){
 		printf("\nHAY UN EMPATE!! LOS CENSISTAS CON MAS CENSOS REALIZADOS SON:");
 		listarCensistaByLegajo(list,tam2,100);
+		printf("\nCON %d CENSOS", contador1);
 		listarCensistaByLegajo(list,tam2,102);
+		printf("\nCON %d CENSOS", contador3);
+	} else if(contador1 == contador2 && contador1 == contador3){
+		printf("\nHAY TRIPLE EMPATE!! LOS CENSISTAS CON MAS CENSOS REALIZADOS SON:");
+		listarCensistaByLegajo(list,tam2,100);
+		listarCensistaByLegajo(list,tam2,101);
+		listarCensistaByLegajo(list,tam2,102);
+		printf("\nCON %d CENSOS", contador1);
 	}
 
 
