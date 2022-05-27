@@ -78,3 +78,6 @@ int printViviendas(eVivienda* list, int tam);
 * \return int Return (-1) if Error [Invalid length or NULL pointer or without
 free space] - (0) if Ok */
 char deseaContinuar();
+
+
+int listarCensistaByLegajo(eCensista* list, int tam,int legajo);

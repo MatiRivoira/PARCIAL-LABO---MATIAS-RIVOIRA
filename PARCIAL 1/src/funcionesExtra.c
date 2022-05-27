@@ -151,3 +151,18 @@ int printViviendas(eVivienda* list, int tam){
 	}
 	return retorno;
 }
+
+int listarCensistaByLegajo(eCensista* list, int tam,int legajo){
+	int retorno = -1;
+
+		for(int i = 0; i < tam; i++){
+			if(list[i].legajoCensista == legajo){
+				printf("\n----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
+				printf("LEGAJO CENSISTA: %d | NOMBRE: %s | EDAD: %d | TELEFONO: %d", list[i].legajoCensista, list[i].nombre, list[i].edad, list[i].telefono);
+				printf("\n----------------------------------------------------------------------------------------------------------------------------------------------------------");
+				retorno = 0;
+			}
+		}
+
+	return retorno;
+}

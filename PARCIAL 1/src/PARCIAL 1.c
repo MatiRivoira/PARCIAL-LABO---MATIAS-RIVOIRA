@@ -19,7 +19,8 @@
 #include "modificacion.h"
 #include "baja.h"
 #include "listarViviendas.h"
-#include "lsitarCensistas.h"
+#include "listarCensistas.h"
+#include "censoMas.h"
 
 #define TAMCENSISTAS 3
 #define TAMVIVIENDAS 200
@@ -37,11 +38,11 @@ int main(void) {
 	initViviendas(listaViviendas, TAMVIVIENDAS);
 
 	do{
-		llenarInt(&opcionElegida, "\n▂▃▅▆█ MENU PRINCIPAL █▆▅▃▂ \n 1. ALTA VIVIENDA \n 2. MODIFICAR VIVIENDA \n 3. BAJA VIVIENDA \n 4. LISTAR VIVIENDAS \n 5. LISTAR CENCISTAS \n 6. SALIR");
-		while(opcionElegida > 6 || opcionElegida < 1){
+		llenarInt(&opcionElegida, "\n▂▃▅▆█ MENU PRINCIPAL █▆▅▃▂ \n 1. ALTA VIVIENDA \n 2. MODIFICAR VIVIENDA \n 3. BAJA VIVIENDA \n 4. LISTAR VIVIENDAS \n 5. LISTAR CENCISTAS \n 6. CENSO MAS \n 7. SALIR");
+		while(opcionElegida > 7 || opcionElegida < 1){
 			printf("OPCION NO VALIDA, ");
 			system("pause");
-			llenarInt(&opcionElegida, "\n▂▃▅▆█ MENU PRINCIPAL █▆▅▃▂\n 1. ALTA VIVIENDA \n 2. MODIFICAR VIVIENDA \n 3. BAJA VIVIENDA \n 4. LISTAR VIVIENDAS \n 5. LISTAR CENCISTAS \n 6. SALIR");
+			llenarInt(&opcionElegida, "\n▂▃▅▆█ MENU PRINCIPAL █▆▅▃▂\n 1. ALTA VIVIENDA \n 2. MODIFICAR VIVIENDA \n 3. BAJA VIVIENDA \n 4. LISTAR VIVIENDAS \n 5. LISTAR CENCISTAS \n 6. CENSO MAS \n 7. SALIR");
 		}
 		switch(opcionElegida){
 			case 1:
@@ -68,10 +69,15 @@ int main(void) {
 				}
 				break;
 			case 5:
-				listarCensistas(listaCensistas, TAMCENSISTAS);
+				listarCensistas(listaCensistas, TAMCENSISTAS, listaViviendas, TAMVIVIENDAS);
+				break;
+			case 6:
+				if(viviendasCargadas > 0){
+					censoMas(listaViviendas, TAMVIVIENDAS, listaCensistas, TAMCENSISTAS);
+				}
 				break;
 		}
-	}while(opcionElegida != 6);
+	}while(opcionElegida != 7);
 
 	return EXIT_SUCCESS;
 }
